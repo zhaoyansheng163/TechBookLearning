@@ -54,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public UserDetailsService userDetailsService() {
 		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); // 在内存中存放用户信息
 		manager.createUser(User.withUsername("forezp").password("123456").roles("USER").build());
-		manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //只有ADMIN角色权限
+		manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN").build());  //只有ADMIN角色权限
 		//manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //有ADMIN和USER角色权限
 		return manager;
 	}
