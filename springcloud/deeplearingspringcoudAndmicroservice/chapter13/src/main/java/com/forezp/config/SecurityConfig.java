@@ -40,22 +40,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth
-			.inMemoryAuthentication()
-				.withUser("forezp").password("123456").roles("USER");
+		//------内存方式start
+//		auth
+//			.inMemoryAuthentication()
+//				.withUser("forezp").password("123456").roles("USER");
+//
+//		auth.userDetailsService(userDetailsService());
+		//------内存方式end
 
-		auth.userDetailsService(userDetailsService());
-		//auth.userDetailsService(userDetailsService);
+		auth.userDetailsService(userDetailsService);  //------数据库方式
 	}
 	// @formatter:on
 
 
-	@Bean
-	public UserDetailsService userDetailsService() {
-		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); // 在内存中存放用户信息
-		manager.createUser(User.withUsername("forezp").password("123456").roles("USER").build());
-		manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //只有ADMIN角色权限
-		//manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //有ADMIN和USER角色权限
-		return manager;
-	}
+//	@Bean
+//	public UserDetailsService userDetailsService() {
+//		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); // 在内存中存放用户信息
+//		manager.createUser(User.withUsername("forezp").password("123456").roles("USER").build());
+//		manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //只有ADMIN角色权限
+//		//manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN","USER").build());  //有ADMIN和USER角色权限
+//		return manager;
+//	}
 }
