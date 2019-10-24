@@ -1,0 +1,1 @@
+注意 logservice的配置信息是从configserver获取的，因此不能只更新自己的配置文件，因为启动的时候会读取cnfigserver的配置文件
