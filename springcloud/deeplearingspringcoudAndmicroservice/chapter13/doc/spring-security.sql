@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80017
 File Encoding         : 65001
 
-Date: 2019-10-24 14:25:20
+Date: 2019-10-25 12:35:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,13 +40,14 @@ CREATE TABLE `user` (
   `username` varchar(20) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'forezp', '123456');
-INSERT INTO `user` VALUES ('2', 'admin', '123456');
+INSERT INTO `user` VALUES ('1', 'forezp11', '123456');
+INSERT INTO `user` VALUES ('2', 'admin11', '123456');
+INSERT INTO `user` VALUES ('3', 'admin12', '123456');
 
 -- ----------------------------
 -- Table structure for `user_role`
@@ -55,8 +56,11 @@ DROP TABLE IF EXISTS `user_role`;
 CREATE TABLE `user_role` (
   `user_id` int(10) NOT NULL AUTO_INCREMENT,
   `role_id` int(10) NOT NULL,
-  PRIMARY KEY (`user_id`,`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`user_id`,`role_id`),
+  KEY `FKa68196081fvovjhkek5m97n3y` (`role_id`),
+  CONSTRAINT `FK859n2jvi8ivhui0rl0esws6o` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `FKa68196081fvovjhkek5m97n3y` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of user_role
@@ -64,3 +68,4 @@ CREATE TABLE `user_role` (
 INSERT INTO `user_role` VALUES ('1', '1');
 INSERT INTO `user_role` VALUES ('2', '1');
 INSERT INTO `user_role` VALUES ('2', '2');
+INSERT INTO `user_role` VALUES ('3', '2');
