@@ -36,7 +36,11 @@ public class AccountController {
 	
 	@GetMapping(value = "/account/{accountId}")
 	public Account findByAccountId (@PathVariable Integer accountId){
-		return accountRepository.findAccountByAccountId(accountId);
+		Account ac = new Account();
+		ac.setCustomerId(accountId);
+		ac.setBank("ac feom account service");
+		return ac;
+		//return accountRepository.findAccountByAccountId(accountId);
 	}
 	
 	@PutMapping(value = "/account")

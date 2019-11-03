@@ -1,5 +1,6 @@
 package com.dineshonjava.customerservice.controller;
 
+import com.dineshonjava.customerservice.domain.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dineshonjava.customerservice.domain.Customer;
 import com.dineshonjava.customerservice.repository.CustomerRepository;
 import com.dineshonjava.customerservice.service.AccountService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Dinesh.Rajput
@@ -38,8 +42,15 @@ public class CustomerController {
 	
 	@GetMapping(value = "/customer/{customerId}")
 	public Customer findByAccountId (@PathVariable Integer customerId){
-		Customer customer = customerRepository.findByCustomerId(customerId);
-		customer.setAccount(accountService.findByCutomer(customerId));
+//		Customer customer = customerRepository.findByCustomerId(customerId);
+//		customer.setAccount(accountService.findByCutomer(customerId));
+		Customer customer = new Customer();
+		Account ac = new Account();
+		ac.setAccountId(customerId);
+		List<Account> account = new ArrayList<Account>();
+		account.add(ac);
+		customer.setAccount(account);
+		customer.setCity("city from cunstum service");
 		return customer;
 	}
 	
