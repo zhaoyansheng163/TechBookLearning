@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "eadb9f6e-323c-4951-a62b-670ffb90e10d",
+		"name": "深入springcloud16章",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.1 用户注册",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"miya\",\n\t\"password\":\"123456\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/registry",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"registry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 用户登陆",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/login?username=miya&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "miya"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.3 获取用户信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/info/miya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"info",
+						"miya"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.4 test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI4NTAyMzcsInVzZXJfbmFtZSI6Im1peWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZTFhZGNkYjQtZWVmMy00OGY5LTkxNTgtNGZhYWIyOTFkMDdjIiwiY2xpZW50X2lkIjoidWFhLXNlcnZpY2UiLCJzY29wZSI6WyJzZXJ2aWNlIl19.Lt4lp3SqeltHGSa1dzLA-E2OQZsEBWsfKOswP4Ct1gIDdkMH6vrjaXSoLF6Ws3kg__BAJm2ZvtiGKLRx4o3L6kiTHcyLdwnvs9zzb4HWoZEJcVDhHGX1W1OY2YSzOTTMUCnR5ShGF_JwQg30Kr95sUeGFJqJN9_3rH-6Pss2h_R_jjo2FMNbXxAFaK4ApfPtoE7rtWHLtc_sy4eOulp3U_Njm9qq7TNgtO6neNNWCvRSgS5jMo8CDo0BX05xIrF3mz5iTTAbvN3T-YM3ZQ2NLQbFTaq4rID4-4Hv4peI_9ep8Ju4dV5wIhKIOxrV3NyiG2cjQSWbMZaikDx2Yt7SvA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/test?username=miya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"test"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "miya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.5 test1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI4NTAyMzcsInVzZXJfbmFtZSI6Im1peWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZTFhZGNkYjQtZWVmMy00OGY5LTkxNTgtNGZhYWIyOTFkMDdjIiwiY2xpZW50X2lkIjoidWFhLXNlcnZpY2UiLCJzY29wZSI6WyJzZXJ2aWNlIl19.Lt4lp3SqeltHGSa1dzLA-E2OQZsEBWsfKOswP4Ct1gIDdkMH6vrjaXSoLF6Ws3kg__BAJm2ZvtiGKLRx4o3L6kiTHcyLdwnvs9zzb4HWoZEJcVDhHGX1W1OY2YSzOTTMUCnR5ShGF_JwQg30Kr95sUeGFJqJN9_3rH-6Pss2h_R_jjo2FMNbXxAFaK4ApfPtoE7rtWHLtc_sy4eOulp3U_Njm9qq7TNgtO6neNNWCvRSgS5jMo8CDo0BX05xIrF3mz5iTTAbvN3T-YM3ZQ2NLQbFTaq4rID4-4Hv4peI_9ep8Ju4dV5wIhKIOxrV3NyiG2cjQSWbMZaikDx2Yt7SvA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/test1?username=miya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"test1"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "miya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.5 test2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI4NTAyMzcsInVzZXJfbmFtZSI6Im1peWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZTFhZGNkYjQtZWVmMy00OGY5LTkxNTgtNGZhYWIyOTFkMDdjIiwiY2xpZW50X2lkIjoidWFhLXNlcnZpY2UiLCJzY29wZSI6WyJzZXJ2aWNlIl19.Lt4lp3SqeltHGSa1dzLA-E2OQZsEBWsfKOswP4Ct1gIDdkMH6vrjaXSoLF6Ws3kg__BAJm2ZvtiGKLRx4o3L6kiTHcyLdwnvs9zzb4HWoZEJcVDhHGX1W1OY2YSzOTTMUCnR5ShGF_JwQg30Kr95sUeGFJqJN9_3rH-6Pss2h_R_jjo2FMNbXxAFaK4ApfPtoE7rtWHLtc_sy4eOulp3U_Njm9qq7TNgtO6neNNWCvRSgS5jMo8CDo0BX05xIrF3mz5iTTAbvN3T-YM3ZQ2NLQbFTaq4rID4-4Hv4peI_9ep8Ju4dV5wIhKIOxrV3NyiG2cjQSWbMZaikDx2Yt7SvA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/test2?username=miya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"test2"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "miya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.6 getinfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI4NTAyMzcsInVzZXJfbmFtZSI6Im1peWEiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZTFhZGNkYjQtZWVmMy00OGY5LTkxNTgtNGZhYWIyOTFkMDdjIiwiY2xpZW50X2lkIjoidWFhLXNlcnZpY2UiLCJzY29wZSI6WyJzZXJ2aWNlIl19.Lt4lp3SqeltHGSa1dzLA-E2OQZsEBWsfKOswP4Ct1gIDdkMH6vrjaXSoLF6Ws3kg__BAJm2ZvtiGKLRx4o3L6kiTHcyLdwnvs9zzb4HWoZEJcVDhHGX1W1OY2YSzOTTMUCnR5ShGF_JwQg30Kr95sUeGFJqJN9_3rH-6Pss2h_R_jjo2FMNbXxAFaK4ApfPtoE7rtWHLtc_sy4eOulp3U_Njm9qq7TNgtO6neNNWCvRSgS5jMo8CDo0BX05xIrF3mz5iTTAbvN3T-YM3ZQ2NLQbFTaq4rID4-4Hv4peI_9ep8Ju4dV5wIhKIOxrV3NyiG2cjQSWbMZaikDx2Yt7SvA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/userapi/user/myinfo?username=miya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"userapi",
+						"user",
+						"myinfo"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "miya"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

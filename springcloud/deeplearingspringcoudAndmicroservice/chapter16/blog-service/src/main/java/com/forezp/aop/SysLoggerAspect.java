@@ -12,6 +12,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +26,8 @@ import java.util.Date;
 @Aspect
 @Component
 public class SysLoggerAspect {
+    Logger log = LoggerFactory.getLogger(SysLoggerAspect.class);
+
     @Autowired
     private LoggerService loggerService;
 
@@ -34,6 +38,7 @@ public class SysLoggerAspect {
 
     @Before("loggerPointCut()")
     public void saveSysLog(JoinPoint joinPoint) {
+        log.info("------------------------------Enter saveSysLog" );
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
 

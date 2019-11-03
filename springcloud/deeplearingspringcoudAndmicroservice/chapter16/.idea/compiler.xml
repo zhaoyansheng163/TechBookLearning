@@ -7,18 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="account-service" />
-        <module name="admin-service" />
-        <module name="blog-service" />
-        <module name="blogs-service" />
-        <module name="common" />
-        <module name="config-server" />
-        <module name="eureka-server" />
         <module name="gateway-service" />
-        <module name="log-service" />
-        <module name="monitor-service" />
-        <module name="uaa-service" />
-        <module name="user-service" />
         <module name="zipkin-service" />
+        <module name="config-server" />
+        <module name="uaa-service" />
+        <module name="monitor-service" />
+        <module name="blog-service" />
+        <module name="eureka-server" />
+        <module name="user-service" />
+        <module name="blogs-service" />
+        <module name="log-service" />
+        <module name="admin-service" />
+        <module name="common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
