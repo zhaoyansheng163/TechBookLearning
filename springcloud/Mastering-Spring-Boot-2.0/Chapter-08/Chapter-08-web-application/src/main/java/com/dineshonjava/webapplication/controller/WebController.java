@@ -9,12 +9,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.dineshonjava.webapplication.service.AccountService;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Dinesh.Rajput
  *
  */
-@Controller
+@RestController
 public class WebController {
 	
 	@Autowired
@@ -27,7 +28,7 @@ public class WebController {
 	
 	@GetMapping("/accounts")
 	String all(ModelMap model){
-		model.put("accounts", accountService.findByCutomer(null));
-		return "accounts";
+		//model.put("accounts", accountService.findByCutomer(1111));
+		return accountService.findByCutomer(1111);
 	}
 }

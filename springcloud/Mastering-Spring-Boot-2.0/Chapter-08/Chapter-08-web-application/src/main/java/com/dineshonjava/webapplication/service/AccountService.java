@@ -15,10 +15,10 @@ import com.dineshonjava.webapplication.domain.Account;
  * @author Dinesh.Rajput
  *
  */
-@FeignClient("account-service")
+@FeignClient("customer-service")
 public interface AccountService {
 	
-	@GetMapping(value = "/account/customer/{customer}")
-	List<Account> findByCutomer (@PathVariable("customer") Integer customer);
+	@GetMapping(value = "/account/{customer}")
+	String findByCutomer (@PathVariable("customer") Integer customer);
 	
 }
