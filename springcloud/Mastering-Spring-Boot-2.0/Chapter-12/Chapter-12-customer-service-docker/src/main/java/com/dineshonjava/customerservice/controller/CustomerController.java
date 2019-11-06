@@ -1,20 +1,14 @@
 package com.dineshonjava.customerservice.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
+import com.dineshonjava.customerservice.domain.Account;
 import com.dineshonjava.customerservice.domain.Customer;
 import com.dineshonjava.customerservice.repository.CustomerRepository;
 import com.dineshonjava.customerservice.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Dinesh.Rajput
@@ -24,10 +18,10 @@ import com.dineshonjava.customerservice.service.AccountService;
 public class CustomerController {
 	
 	@Autowired
-	CustomerRepository customerRepository;
+    CustomerRepository customerRepository;
 	
 	@Autowired
-	AccountService accountService;  
+    AccountService accountService;
 	
 	@PostMapping(value = "/customer")
 	public Customer save (@RequestBody Customer customer){
@@ -36,18 +30,21 @@ public class CustomerController {
 	
 	@GetMapping(value = "/customer")
 	public Iterable<Customer> all (){
-		List<Customer> customers = new ArrayList<>();
-		for(Customer customer : customerRepository.findAll()){
-			customer.setAccount(accountService.findByCutomer(customer.getCustomerId()));
-		}
-		return customers;
+		return customerRepository.findAll();
 	}
 	
 	@GetMapping(value = "/customer/{customerId}")
-	public Customer findByAccountId (@PathVariable Integer customerId){
-		Customer customer = customerRepository.findByCustomerId(customerId);
-		customer.setAccount(accountService.findByCutomer(customerId));
-		return customer;
+	public String findByAccountId (@PathVariable Integer customerId){
+//		Customer customer = new Customer();
+//		Account a = new Account();
+//		a.setAccountId(customerId);
+//		a.setBank("testbank");
+//		List<Account> l = new ArrayList<>();
+//		l.add(a);
+//		customer.setAccount(l);
+//		return "cuccc:" + customerId;
+
+		return accountService.findByCutomer(customerId);
 	}
 	
 	@PutMapping(value = "/customer")

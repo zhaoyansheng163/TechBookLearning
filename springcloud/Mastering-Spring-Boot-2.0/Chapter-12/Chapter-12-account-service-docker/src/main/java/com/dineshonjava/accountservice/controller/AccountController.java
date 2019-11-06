@@ -1,5 +1,6 @@
 package com.dineshonjava.accountservice.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,24 @@ public class AccountController {
 	public Iterable<Account> all (){
 		return accountRepository.findAll();
 	}
-	
-	@GetMapping(value = "/account/{accountId}")
-	public Account findByAccountId (@PathVariable Integer accountId){
-		return accountRepository.findAccountByAccountId(accountId);
+//
+//	@GetMapping(value = "/account/{accountId}")
+//	public Account findByAccountId (@PathVariable Integer accountId){
+//		return accountRepository.findAccountByAccountId(accountId);
+//	}
+
+	@GetMapping(value = "/account/{customerId}")
+	public String findByAccountId (@PathVariable Integer customerId){
+//		Customer customer = new Customer();
+//		Account a = new Account();
+//		a.setAccountId(customerId);
+//		a.setBank("testbank");
+//		List<Account> l = new ArrayList<>();
+//		l.add(a);
+//		customer.setAccount(l);
+		return "cuccc from accountService:" + customerId;
 	}
-	
+
 	@PutMapping(value = "/account")
 	public Account update (@RequestBody Account account){
 		return accountRepository.save(account);
