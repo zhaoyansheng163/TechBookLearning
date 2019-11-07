@@ -1,17 +1,9 @@
-/**
- * 
- */
-package com.dineshonjava.sba;
+http://127.0.0.1:8080/actuator/info
 
-import org.springframework.boot.actuate.health.Health;
-import org.springframework.boot.actuate.health.HealthIndicator;
-import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
-/**
- * @author Dinesh.Rajput
- *
- */
+http://127.0.0.1:8080/actuator/health
+如下，可以通过检查某个链接能不能访问，来显示状态是否正常
+
 @Component
 public class DineshonjavaHealth implements HealthIndicator{
 
@@ -27,3 +19,4 @@ public class DineshonjavaHealth implements HealthIndicator{
 	}
 
 }
+
