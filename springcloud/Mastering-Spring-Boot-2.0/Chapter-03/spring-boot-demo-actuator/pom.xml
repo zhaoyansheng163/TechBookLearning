@@ -9,12 +9,17 @@
 
 	<name>spring-boot-demo-actuator</name>
 	<description>Demo project for Spring Boot</description>
-
-	<parent>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.0.RELEASE</version>
+    <!--<relativePath/>-->
+  </parent>
+<!--	<parent>
 		<groupId>com.xkcoding</groupId>
 		<artifactId>spring-boot-demo</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
-	</parent>
+	</parent>-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
