@@ -1,0 +1,6 @@
+参考：https://github.com/xkcoding/spring-boot-demo/tree/master/spring-boot-demo-actuator
+
+
+http://localhost:8090/sys/actuator/mappings
+
+http://localhost:8090/sys/actuator/beans
