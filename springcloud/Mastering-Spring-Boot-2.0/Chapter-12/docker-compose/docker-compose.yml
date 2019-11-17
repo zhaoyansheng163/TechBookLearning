@@ -1,23 +1,25 @@
 version: "2"
 services:
   eureka:
-    image: doj/eureka-server
+    image: spring-boot-eureka:1.0.7
     ports:
-      - "8080:8761"
+      - "8761:8761"
   account:
-    image: doj/account-service
+    image: spring-boot-account:1.0.7
+    ports:
+      - "6060:6060"
     links:
       - eureka 
   customer:
-    image: doj/customer-service
+    image: spring-boot-customer:1.0.7
     ports:
-      - "8282:6060"
+      - "6161:6161"
     links:
       - eureka
       - account
-  ha_account:
-     image: tutum/haproxy
-     links:
-      - account
-     ports:
-       - "8181:80"
+#  ha_account:
+#     image: tutum/haproxy
+#     links:
+#      - account
+#     ports:
+#       - "8181:80"

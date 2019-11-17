@@ -21,7 +21,7 @@ ADD . /app
 ADD target/customer-service-0.0.1-SNAPSHOT.jar customer-microservice.jar
 
 # Make port 8181 available to the world outside this container
-EXPOSE 8181
+EXPOSE 6161
 
 # Define environment variable
 ENV JAVA_OPTS=""
