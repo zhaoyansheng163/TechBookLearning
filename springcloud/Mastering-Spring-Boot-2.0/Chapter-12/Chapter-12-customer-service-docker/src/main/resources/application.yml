@@ -19,3 +19,6 @@ logging:
       project:
           user:
             UserClient: FULL
+ribbon:
+  eureka:
+    enabled: true
