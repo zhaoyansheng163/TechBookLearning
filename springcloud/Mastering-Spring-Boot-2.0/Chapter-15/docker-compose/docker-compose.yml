@@ -1,0 +1,29 @@
+version: "2"
+services:
+  eureka:
+    image: spring-boot-eureka:1.0.12
+    ports:
+      - "8761:8761"
+  account:
+    image: spring-boot-account:1.0.12
+    ports:
+      - "6060:6060"
+    links:
+      - eureka 
+  customer:
+    image: spring-boot-customer:1.0.12
+    ports:
+      - "6161:6161"
+    links:
+      - eureka
+      - account
+  customer:
+    image: spring-boot-zipkin:1.0.12
+    ports:
+      - "9411:9411"      
+#  ha_account:
+#     image: tutum/haproxy
+#     links:
+#      - account
+#     ports:
+#       - "8181:80"
