@@ -17,7 +17,7 @@ services:
     links:
       - eureka
       - account
-  customer:
+  zipkin:
     image: spring-boot-zipkin:1.0.12
     ports:
       - "9411:9411"      
