@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -61,7 +62,7 @@ public class CustomerController {
 		Customer customer = customerRepository.findByCustomerId(customerId);
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
 		logger.info("Customer's account information by calling account-service ");
-		List<Account> list = restTemplate.getForObject("http://localhost:6060/account/customer/"+customerId, List.class, customer);
+		List<Account> list = restTemplate.getForObject("http://ACCOUNT-SERVICE/account/customer/"+customerId, List.class, customer);
 		//String hii = restTemplate.getForObject("http://localhost:6161/hi", String.class,params);
 		customer.setAccount(list);
 		logger.info("Find Customer information by id with fetched account info: ");
