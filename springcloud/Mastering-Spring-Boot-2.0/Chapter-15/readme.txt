@@ -20,4 +20,14 @@ http://127.0.0.1:9411/zipkin/
 
 
 
+eraka优化：
+1、网址链接去掉主机名
+2、网址打开时  可以访问  http://192.168.245.1:6161/actuator/info（默认为http://192.168.245.1:6161/info）
+3、服务发现
+http://192.168.245.1:6060/dept/discovery
+4、earaka  status网址调整  参考  https://www.cnblogs.com/li3807/p/7282492.html
+
+
+
+
 

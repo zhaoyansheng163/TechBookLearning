@@ -37,3 +37,8 @@ management:
 ribbon:
   eureka:
     enabled: true
+info:
+  app.name: atguigu-customer
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
