@@ -12,7 +12,7 @@ spring:
     user:
       name: admin
       password: 123456
-    enable: true
+
 # Discovery Server Access
 eureka:
     client:
