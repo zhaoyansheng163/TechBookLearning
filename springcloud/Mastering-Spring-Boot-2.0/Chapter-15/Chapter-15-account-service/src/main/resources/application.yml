@@ -8,6 +8,11 @@ spring:
   zipkin:
     enabled: true
     baseUrl: http://localhost:9411/
+  security:
+    user:
+      name: admin
+      password: 123456
+    enable: true
 # Discovery Server Access
 eureka:
     client:
