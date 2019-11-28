@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../chapter12/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter12/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapter12/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter12/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapter12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter12/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapter12/chapter12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter12/chapter12.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
