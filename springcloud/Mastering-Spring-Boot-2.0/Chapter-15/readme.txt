@@ -28,6 +28,10 @@ http://192.168.245.1:6060/dept/discovery
 4、earaka  status网址调整  参考  https://www.cnblogs.com/li3807/p/7282492.html
 
 
+actuator 认证参考：
+http://www.mamicode.com/info-detail-2375708.html
+
+
 
 
 
